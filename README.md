@@ -32,25 +32,29 @@ To use Pushover you should register on [Pushover](https://pushover.net), obtain 
 ### Car model and equipment
 
 - model - set one of the following values:  my, m3, ms, mx
+
 Example:
 ```
 model = "my"
 ```
 
 - condition - condition of your Tesla, possible values: new, used
+
 Example:
 ```
 condition = "new"
 ```
 
-- colors - list of exterior paint colors, possible values: WHITE, BLACK, BLUE, SILVER, RED. You can choose more then one (separated commas), or leave empty if color doesn't matter
+- colors - list of exterior paint colors, possible values: WHITE, BLACK, BLUE, SILVER, RED. You can choose more then one (separated commas), or leave empty if color doesn't matter.
+
 Example:
 ```
 colors = ["WHITE", "BLACK"] # colors white and black
 colors = [] # colors doesn't matter
 ```
 
-- wheels - wheels size for your car, possible values EIGHTEEN, NINETEEN, TWENTY, TWENTY_ONE, TWENTY_TWO. Not all sizes are available in every model. You can choose more then one (separated commas), or leave empty if wheels size doesn't matter
+- wheels - wheels size for your car, possible values EIGHTEEN, NINETEEN, TWENTY, TWENTY_ONE, TWENTY_TWO. Not all sizes are available in every model. You can choose more then one (separated commas), or leave empty if wheels size doesn't matter.
+
 Example:
 ```
 wheels = ["NINETEEN", "TWENTY"] # wheels sizes 19" and 20"
@@ -58,6 +62,7 @@ wheels = [] # wheels size doesn't matter
 ```
 
 - towing - To add towing option set to TOWING otherwise set empty
+
 Example:
 ```
 towing = "TOWING" # car with tow hitch
@@ -124,6 +129,7 @@ zipCode = "00050"
 ```
 
 - range - distance from your location to location of car. Set up to 200 (miles/kilometer) or 0 to find all deliverable cars.
+
 Example:
 ```
 zipCode = "0"
@@ -131,7 +137,8 @@ zipCode = "0"
 
 ### Price
 You can limit maximum price of car using that parameter.
-- maxPrice - price in local currency, set to 0 if doesn't matter
+- maxPrice - price in local currency, set to 0 if doesn't matter.
+
 Example:
 ```
 maxPrice = 250250
