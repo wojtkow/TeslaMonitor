@@ -123,7 +123,7 @@ Example:
 zipCode = "00050"
 ```
 
-- range - distance from your location to location of car. Set up to 200 (miles/kilometer) or 9 to find all deliverable cars.
+- range - distance from your location to location of car. Set up to 200 (miles/kilometer) or 0 to find all deliverable cars.
 Example:
 ```
 zipCode = "0"
