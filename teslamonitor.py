@@ -89,7 +89,7 @@ url = 'https://www.tesla.com/inventory/api/v1/inventory-results?query=' + urllib
 
 print(url)
 headers = {}
-headers['User-Agent'] = 'FooBar-Spider 1.2'
+headers['User-Agent'] = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36'
 headers['Accept'] = 'application/json'
 
 s = requests.Session()
