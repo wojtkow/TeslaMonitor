@@ -17,6 +17,15 @@ model = "my"
 # possible values: new, used
 condition = "new"
 
+# Car version
+# Leave empty if doesn't matter, add more separated comma if you would select more then one
+# Possible values: 
+# for Tesla Y: RAWD, LRAWD, MYRWD
+# for Tesla 3: LRAWD, LRRWD, M3RWD
+# for Tesla X: MXPLAID, MXAWD
+# for Tesla S: MSPLAID, MSAWD
+version = ["LRAWD"]
+
 # Additional car options
 
 # Possible colors of car
@@ -59,12 +68,15 @@ carJson = {
 
 if len(colors) > 0 or len(wheels) > 0 or len(towing) > 0:
 	optionsJson = {}
+	if len(version) > 0:
+		optionsJson["TRIM"] = version
 	if len(colors) > 0:
 		optionsJson["PAINT"] = colors
 	if len(wheels) > 0:
 		optionsJson["WHEELS"] = wheels
 	if len(towing) > 0:
 		optionsJson["ADL_OPTS"] = ["TOWING"]
+
 	carJson["options"] = optionsJson
 	
 carJson["arrangeby"] = "Price"

@@ -38,6 +38,21 @@ Example:
 model = "my"
 ```
 
+- version (aka trim) - choose from the following values:
+  - for Tesla Y: RAWD, LRAWD, MYRWD
+  - for Tesla 3: LRAWD, LRRWD, M3RWD
+  - for Tesla X: MXPLAID, MXAWD
+  - for Tesla S: MSPLAID, MSAWD
+
+You can choose more then one (separated commas), or leave empty if color doesn't matter.
+
+Example:
+```
+version = ["MXPLAID"] # Tesla X PLAID
+version = ["LRAWD", "MYRWD"] # Tesla Y AWD & RWD
+version = [] # version doesn't matter
+```
+
 - condition - condition of your Tesla, possible values: new, used
 
 Example:
