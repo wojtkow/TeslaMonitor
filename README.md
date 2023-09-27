@@ -172,5 +172,12 @@ or add teslamonitor.py to crontab (in some cases additional shell script `teslam
 Example of usage of cron to run monitor every 15 minutes
 
 ```
-*/15 * * * * root /path_to_script/teslamonitor.py >/dev/null
+*/15 * * * * root /path_to_script/teslamonitor.sh >/dev/null
 ```
+
+or 
+```
+*/15 * * * * cd  /path_to_script/ && python3 teslamonitor.py > /dev/null
+```
+
+All depends on version of operating system and cron you use.
