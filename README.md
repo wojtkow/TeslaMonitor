@@ -8,21 +8,27 @@ Script can be run from command line or automaticaly using in example cron.
 Found cars are displayed on console, script allows also to send push notification to your phone using [Pushover](https://pushover.net)
 Script sends only one notication per car (per vin exactly)
 
+## Versions
+
+This script has two versions:
+- teslamonitor.py - standard version, that use requests and can work directly in operating system without graphical console and installed chrome/chromium. This version can be easly blocked by API.
+- teslamonitorselenium.py - version that use selenium framework, which use chrome/chromium browser, this version allows to bypass the connection block Tesla api. Unfortunatelly this version requires chrome/chromium installed in the system and graphical console.
+
 ## Install
 
 ### Requirements
 
 - Installed python3
 - Installed pip (in some situations can be useful)
-- Installed Selenium for teslamonitorselenium.py
+- Installed Selenium for teslamonitorselenium.py (`pip3 install selenium`)
 
 ### Instalation
 
-Clone that repository or simply download teslamonitor.py file to local folder. Then follow instructions from [Configuration](#configuration) chapter.
+Clone that repository or simply download teslamonitor.py and teslamonitorselenium.py files to local folder. Then follow instructions from [Configuration](#configuration) chapter.
 
 ## Configuration
 
-Configuration occurs on the beginning of script. You can set keys neccessary to use Pushover and model of Tesla you are looking for.
+Configuration occurs on the beginning of every script. You can set keys neccessary to use Pushover and model of Tesla you are looking for.
 
 ### Pushover
 To use Pushover you should register on [Pushover](https://pushover.net), obtain user key and token, set it in the file and then install Pushover mobile app on your phone.
@@ -168,7 +174,13 @@ You can run script directly from command line using:
 ```
 python3 teslamonitor.py
 ```
-or add teslamonitor.py to crontab (in some cases additional shell script `teslamonitor.sh` can be required).
+
+or
+```
+python3 teslamonitorselenium.py
+```
+
+You can also add teslamonitor.py to crontab (in some cases additional shell script `teslamonitor.sh` can be required).
 
 Example of usage of cron to run monitor every 15 minutes
 
