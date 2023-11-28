@@ -14,6 +14,7 @@ Script sends only one notication per car (per vin exactly)
 
 - Installed python3
 - Installed pip (in some situations can be useful)
+- Installed Selenium for teslamonitorselenium.py
 
 ### Instalation
 
