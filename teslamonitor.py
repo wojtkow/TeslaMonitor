@@ -97,7 +97,7 @@ queryJson = {
 
 queryString = json.dumps(queryJson)
 
-url = 'https://www.tesla.com/inventory/api/v1/inventory-results?query=' + urllib.parse.quote(queryString)
+url = 'https://www.tesla.com/inventory/api/v4/inventory-results?query=' + urllib.parse.quote(queryString)
 
 print(url)
 headers = {}
